@@ -40,7 +40,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-app.post('/api/send-email', async (req, res) => {
+app.post('/', async (req, res) => {
   const { name, email, message } = req.body;
 
   const validationErrors = validateInput(name, email, message);
